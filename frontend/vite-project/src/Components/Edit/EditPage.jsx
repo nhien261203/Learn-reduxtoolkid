@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./edit.scss";
+import Input from "../InputField/Input";
 const EditPage = () => {
     const avaUrl = [
         "https://preview.redd.it/rrz3hmsxcll71.png?width=640&crop=smart&auto=webp&s=87cc5ed38d8f088ef9fffef7a4c5756b64309d6a",
@@ -30,15 +31,9 @@ const EditPage = () => {
                         Edit profile
                     </div>
                     <div className="input-container">
-                        <label>Display name</label>
-                        <input type="text"
-                            placeholder="Do Van Nhien"
-                            onChange={(e) =>setName(e.target.value)} />
-                        <label >Age</label>
-                        <input type="text" placeholder="20" onChange={(e) =>setAge(e.target.value)}/>
-                        <label >About</label>
-                        <textarea className="input-about"onChange={(e) =>setAbout(e.target.value)}></textarea>
-
+                        <Input label="Display name" data={name} setData={setName} />
+                        <Input label="Age" data={age} setData={setAge} />
+                        <Input inputType="textarea" classStyle="input-about" label="About" data={about} setData={setAbout} />
                         <label > Profile Picture</label>
                         <div className="input-image-container">
                             {avaUrl.map((url, index) => (
