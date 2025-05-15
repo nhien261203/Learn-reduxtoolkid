@@ -1,6 +1,8 @@
+import { useSelector } from "react-redux";
 import "./header.scss";
 const Header = (props) => {
     const {setEdit} = props;
+    const user = useSelector((state)=>state.user);
     const handleEdit = ()=>{
         setEdit(true);
     }
@@ -11,12 +13,12 @@ const Header = (props) => {
                     <div className="info-edit" onClick={handleEdit}>
                         Edit
                     </div>
-                    <img src="https://preview.redd.it/rrz3hmsxcll71.png?width=640&crop=smart&auto=webp&s=87cc5ed38d8f088ef9fffef7a4c5756b64309d6a"
+                    <img src={user.avaUrl}
                         alt=""
                         className="info-ava" />
-                    <div className="info-username">Do Van Nhien</div>
-                    <div className="info-age">22 years old</div>
-                    <div className="info-about">I`m a software engineer</div>
+                    <div className="info-username">{user.name}</div>
+                    <div className="info-age">{user.age}</div>
+                    <div className="info-about">{user.about}</div>
                 </div>
             </header>
         </>

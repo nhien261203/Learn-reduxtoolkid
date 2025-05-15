@@ -4,7 +4,7 @@ export const userSlice = createSlice({
     name: "user",
     // gia tri ban dau, khi vao trang
     initialState:{
-        name: "Nhien",
+        name: "Do Van Nhien",
         age:"22",
         about:"I`m a software engineer",
         avaUrl:
@@ -16,11 +16,15 @@ export const userSlice = createSlice({
         // action.payload.name la hanh dong ban muon lam voi cac gia tri trong InittalState ( gia tri ban ngoai truyen vao)
         update:(state,action)=>{
             state.name= action.payload.name;
-            state.age = action.payload.about;
+            state.age = action.payload.age;
+            state.about = action.payload.about;
             state.avaUrl = action.payload.avaUrl;
-        }
+        },
     }
         
 
     
 });
+
+export const {update} = userSlice.actions;
+export default userSlice.reducer;
