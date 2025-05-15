@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./edit.scss";
 import Input from "../InputField/Input";
-const EditPage = () => {
+const EditPage = (props) => {
+    const {setEdit} = props;
     const avaUrl = [
         "https://preview.redd.it/rrz3hmsxcll71.png?width=640&crop=smart&auto=webp&s=87cc5ed38d8f088ef9fffef7a4c5756b64309d6a",
         "https://preview.redd.it/fc9k38jwfwv51.png?auto=webp&s=9ce3d4c488091bb21969fd0fad7a6d89e4bfc50d",
@@ -21,9 +22,14 @@ const EditPage = () => {
     const [url, setUrl] = useState(
         "https://preview.redd.it/rrz3hmsxcll71.png?width=640&crop=smart&auto=webp&s=87cc5ed38d8f088ef9fffef7a4c5756b64309d6a"
     );
+
+    const handleSubmit= (e)=>{
+        e.preventDefault();
+        setEdit(false);
+    }
     return (
         <>
-            <form >
+            <form onSubmit={handleSubmit}>
                 <section className="edit-container">
                     <button className="close">Save</button>
 
