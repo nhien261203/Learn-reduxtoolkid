@@ -40,6 +40,7 @@ const EditPage = (props) => {
             age:age,
             about:about,
             avaUrl:url,
+            themeColor:theme,
         };
         dispatch(update(updateUser));
     };
@@ -70,7 +71,12 @@ const EditPage = (props) => {
                         </div>
                         <div className="theme-container">
                             <label>Theme</label>
-                            <input type="color" className="theme-color" />
+                            <input 
+                                type="color" 
+                                className="theme-color" 
+                                value={theme}
+                                onChange={(e) => setTheme(e.target.value)}
+                            />
                         </div>
                     </div>
                 </section>

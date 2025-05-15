@@ -8,7 +8,8 @@ export const userSlice = createSlice({
         age:"22",
         about:"I`m a software engineer",
         avaUrl:
-            "https://preview.redd.it/rrz3hmsxcll71.png?width=640&crop=smart&auto=webp&s=87cc5ed38d8f088ef9fffef7a4c5756b64309d6a"
+            "https://preview.redd.it/rrz3hmsxcll71.png?width=640&crop=smart&auto=webp&s=87cc5ed38d8f088ef9fffef7a4c5756b64309d6a",
+        themeColor: '#ff9051',
     },
     // chua cac function nho hanh dong voi initalstate
     reducers:{
@@ -19,6 +20,7 @@ export const userSlice = createSlice({
             state.age = action.payload.age;
             state.about = action.payload.about;
             state.avaUrl = action.payload.avaUrl;
+            state.themeColor= action.payload.themeColor;
         },
     }
         

@@ -8,7 +8,9 @@ const Header = (props) => {
     }
     return (
         <>
-            <header style={{ backgroundColor: '#ff9051', backgroundImage: 'linear-gradient(280deg,#ff9051 2%, #ff9051, 65%, #181818 100% )' }}>
+            <header style={{ 
+                backgroundColor: `${user.themeColor}`, 
+                backgroundImage: `linear-gradient(280deg,${user.themeColor} 2%, ${user.themeColor}, 65%, #181818 100% )` }}>
                 <div className="info-container">
                     <div className="info-edit" onClick={handleEdit}>
                         Edit
