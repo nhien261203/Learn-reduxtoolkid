@@ -3,9 +3,10 @@ import "./edit.scss";
 import Input from "../InputField/Input";
 import { useDispatch, useSelector } from "react-redux";
 import { update } from "../../redux/userSlice";
+import { useNavigate } from "react-router-dom";
 const EditPage = (props) => {
     const {setEdit} = props;
-
+    const navigate = useNavigate();
   
 
     const avaUrl = [
@@ -43,6 +44,7 @@ const EditPage = (props) => {
             themeColor:theme,
         };
         dispatch(update(updateUser));
+        navigate('/');
     };
     return (
         <>
