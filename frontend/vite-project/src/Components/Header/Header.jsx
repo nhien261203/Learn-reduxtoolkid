@@ -11,6 +11,10 @@ const Header = (props) => {
         navigate('/edit');
     }
 
+    const handleAbout = () => {
+        navigate('/about');
+    }
+
     const navigate = useNavigate();
     const handleProductClick = () => {
         navigate('/product'); // Điều hướng đến trang product
@@ -29,6 +33,10 @@ const Header = (props) => {
 
                         <div className="info-product" onClick={handleProductClick}>
                             Product
+                        </div>
+
+                        <div className="button-about" onClick={handleAbout}>
+                            About
                         </div>
                     </div>
 

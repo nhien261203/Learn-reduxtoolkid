@@ -4,24 +4,17 @@ header {
     flex-direction: column;
     justify-content: center;
 
-    .list-button{
+    .list-button {
         display: flex;
-        
+
         justify-content: flex-end;
     }
 
-    .info-edit {
-        cursor: pointer;
-        align-self: flex-end;
-        border: 2px solid white;
-        margin: 1rem 1.15rem 0 0;
-        padding: 0.45rem;
-        border-radius: 16px;
-        font-weight: 700;
-        font-size: 1rem;
-    }
+    
 
-    .info-product {
+    .info-product,
+    .button-about,
+    .info-edit {
         cursor: pointer;
         align-self: flex-end;
         border: 2px solid lightslategrey;
@@ -31,7 +24,19 @@ header {
         font-weight: 700;
         font-size: 1rem;
         color: lightslategray;
+        transition: all 0.3s ease;
+        /* thêm hiệu ứng mượt */
+
+        &:hover {
+            background-color: lightslategray;
+            color: white;
+            box-shadow: 0 0 10px rgba(119, 136, 153, 0.7);
+        }
     }
+
+
+
+
 
 
     .info-container {

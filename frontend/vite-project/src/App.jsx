@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Product from './Components/Product/Product'; 
 import ProductForm from './Components/Product/ProductForm';
+import About from './Components/About/About';
 
 function App() {
   const [isEdit, setEdit] = useState(false);
@@ -16,6 +17,8 @@ function App() {
           <Route path="/edit" element={<EditPage setEdit={setEdit} />} />
           <Route path="/product" element={<Product />} />
           <Route path="/add" element={<ProductForm />} />
+          <Route path="/about" element={<About />} />
+
         </Routes>
       </div>
     </BrowserRouter>

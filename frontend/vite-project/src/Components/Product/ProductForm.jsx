@@ -100,7 +100,7 @@ const ProductForm = () => {
                         <Button type="submit" variant="contained" color="primary">
                             Thêm
                         </Button>
-                        <Button variant="outlined" onClick={() => navigate('/products')}>
+                        <Button variant="outlined" onClick={() => navigate('/product')}>
                             Hủy
                         </Button>
                     </Stack>
@@ -127,3 +127,7 @@ const ProductForm = () => {
 };
 
 export default ProductForm;
+// test spire
+
+
+
